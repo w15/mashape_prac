@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get "/yoda" => 'pages#yoda'
   get '/yoda_response' => 'pages#yoda_response'
+
+  get '/face' => 'pages#face'
+  get '/face_response' => 'pages#face_response'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

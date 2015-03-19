@@ -12,5 +12,22 @@ class PagesController < ApplicationController
         "Accept" => "text/plain"
       }
 
+      # raise @response.inspect
+
   end
+
+  def face
+
+  end
+
+  def face_response
+    @response = Unirest.get "https://faceplusplus-faceplusplus.p.mashape.com/detection/detect?attribute=glass%2Cpose%2Cgender%2Cage%2Crace%2Csmiling&url=#{params['face_url']}",
+      headers:{
+        "X-Mashape-Key" => ENV['MASHAPE_KEY'],
+        "Accept" => "application/json"
+      }
+
+
+  end
+
 end

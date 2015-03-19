@@ -30,4 +30,21 @@ class PagesController < ApplicationController
 
   end
 
+  def sentiment
+  end
+
+  def sentiment_response
+    text = URI.encode(params['text'])
+
+    @response = Unirest.get "https://loudelement-free-natural-language-processing-service.p.mashape.com/nlp-text/?text=#{ text }",
+      headers:{
+        "X-Mashape-Key" => ENV['MASHAPE_KEY'],
+        "Accept" => "application/json",
+      }
+
+      raise @response.body.inspect
+  end
+
+
+
 end

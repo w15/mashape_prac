@@ -2,7 +2,9 @@
 
 <h2>This person is probably <%= @response.body['face'][0]['attribute']['age']['value'] %> years old</h2>
 
-<%= @response.body.keys %>
+<%= @response.body.key %>
+
+<%= @response.body['face'][0].keys %>
 
 
 {"face"=>[{"attribute"=>{"age"=>{"range"=>10, "value"=>38}, "gender"=>{"confidence"=>99.7041, "value"=>"Male"}, "glass"=>{"confidence"=>99.9482, "value"=>"None"}, "pose"=>{"pitch_angle"=>{"value"=>9.2e-05}, "roll_angle"=>{"value"=>-0.195963}, "yaw_angle"=>{"value"=>0.037183}}, "race"=>{"confidence"=>92.3651, "value"=>"White"}, "smiling"=>{"value"=>88.3586}}, "face_id"=>"0d8187862b800636ddc30b9073680dd6", "position"=>{"center"=>{"x"=>52.1611, "y"=>56.654344}, "eye_left"=>{"x"=>35.12554, "y"=>47.257486}, "eye_right"=>{"x"=>64.708055, "y"=>47.162292}, "height"=>51.571165, "mouth_left"=>{"x"=>37.804519, "y"=>71.510721}, "mouth_right"=>{"x"=>62.591159, "y"=>71.008688}, "nose"=>{"x"=>51.076228, "y"=>59.731423}, "width"=>54.81336}, "tag"=>""}], "img_height"=>541, "img_id"=>"92d524fc1fefcaad0cea0b5719d2da46", "img_width"=>509, "session_id"=>"fe0b6836c31d4c708e5930162016c96c", "url"=>"http://vignette2.wikia.nocookie.net/mrbean/images/4/4b/Mr_beans_holiday_ver2.jpg/revision/latest?cb=20100424114324"}

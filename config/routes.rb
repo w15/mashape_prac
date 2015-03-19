@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   get '/face' => 'pages#face'
   get '/face_response' => 'pages#face_response'
+
+  get '/sentiment' => 'pages#sentiment'
+  post '/sentiment_response' => 'pages#sentiment_response'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

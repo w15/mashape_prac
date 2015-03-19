@@ -1,0 +1,14 @@
+<h1>Sentiment analysis</h1>
+<p>Enter some text and we'll tell you how emotionally charged it is</p>
+
+<%= form_tag("/sentiment_response") do %>
+  <textarea name="text" cols="30" rows="10"></textarea>
+  <input type="submit">
+<% end %>
+
+
+<!-- <form action="/sentiment_response">
+  <textarea name="text" cols="30" rows="10"></textarea>
+  <input type="submit">
+</form>
+ -->
